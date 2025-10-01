@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration & Facts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Daily Inspiration & Facts</h1>
+            <p class="subtitle">Fuel your mind with wisdom and knowledge</p>
+        </header>
+        
+        <!-- Control Panel -->
+        <div class="controls">
+            <button id="refreshBtn" class="refresh-btn">
+                🔄 Get New Content
+            </button>
+            
+            <div class="category-selector">
+                <label for="quoteCategory">Quote Category:</label>
+                <select id="quoteCategory">
+                    <option value="inspirational">Inspirational</option>
+                    <option value="success">Success</option>
+                    <option value="leadership">Leadership</option>
+                    <option value="business">Business</option>
+                    <option value="motivational">Motivational</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Content Display Area -->
+        <div class="content-grid">
+            <!-- Daily Quote Section -->
+            <div class="content-card quote-card">
+                <div class="card-header">
+                    <h2>💡 Quote of the Moment</h2>
+                </div>
+                <div id="quoteDisplay" class="card-content">
+                    <p class="loading-message">Loading inspirational quote...</p>
+                </div>
+            </div>
+            
+            <!-- Random Fact Section -->
+            <div class="content-card fact-card">
+                <div class="card-header">
+                    <h2>🧠 Did You Know?</h2>
+                </div>
+                <div id="factDisplay" class="card-content">
+                    <p class="loading-message">Loading fascinating fact...</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Loading Indicators -->
+        <div id="loadingQuote" class="loading-indicator hidden">
+            <p>Fetching new quote... 💭</p>
+        </div>
+        
+        <div id="loadingFact" class="loading-indicator hidden">
+            <p>Discovering new fact... 🔍</p>
+        </div>
+        
+        <!-- Error Display -->
+        <div id="errorDisplay" class="error-display hidden">
+            <h3>⚠️ Oops!</h3>
+            <p id="errorMessage"></p>
+            <button onclick="location.reload()">Try Again</button>
+        </div>
+        
+        <!-- Architecture Explanation -->
+        <div class="info-section">
+            <h3>How this application works:</h3>
+            <div class="architecture-grid">
+                <div class="layer">
+                    <h4>📊 Data Layer</h4>
+                    <ul>
+                        <li>API Ninjas Quotes API</li>
+                        <li>API Ninjas Facts API</li>
+                        <li>Real-time content delivery</li>
+                    </ul>
+                </div>
+                <div class="layer">
+                    <h4>⚙️ Processing Layer</h4>
+                    <ul>
+                        <li>API authentication with keys</li>
+                        <li>Multiple simultaneous requests</li>
+                        <li>Error handling and retries</li>
+                    </ul>
+                </div>
+                <div class="layer">
+                    <h4>🎨 UI Layer</h4>
+                    <ul>
+                        <li>Responsive card-based design</li>
+                        <li>Category selection controls</li>
+                        <li>Loading states and feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
